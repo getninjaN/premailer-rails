@@ -26,11 +26,11 @@ class Premailer
 
         def asset_host_present?
           ::Rails.respond_to?(:configuration) &&
-            ::Rails.configuration.action_controller.asset_host.present?
+            ::Rails.configuration.action_mailer.asset_host.present?
         end
 
         def asset_host(url)
-          config = ::Rails.configuration.action_controller.asset_host
+          config = ::Rails.configuration.action_mailer.asset_host
           config.respond_to?(:call) ? config.call(url) : config
         end
       end
