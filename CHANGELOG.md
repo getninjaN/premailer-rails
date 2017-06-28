@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.9.7
+
+- Use `Rails.root` in `FileSystemLoader` (@stanhu, #195)
+
+## v1.9.6
+
+- Handle `relative_url_root` in when loading CSS from file system
+
 ## v1.9.5
 
 - Mention license in gemspec
